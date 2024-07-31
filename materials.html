@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ material.title }}</h1>
+<p>{{ material.description }}</p>
+<video width="600" controls>
+    <source src="{{ material.video_url }}" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Dashboard</h1>
+<ul>
+    {% for material in materials %}
+        <li>
+            <a href="{{ url_for('material', id=material.id) }}">{{ material.title }}</a>
+            <p>{{ material.description }}</p>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
